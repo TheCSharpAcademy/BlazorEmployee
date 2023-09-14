@@ -1,0 +1,31 @@
+﻿@page "/Login"
+@model LoginModel
+
+<h3>Login Page</h3>
+
+@{
+   
+    <div class="wrapper">
+        <div class="logo">
+            <img src="https://www.freepnglogos.com/uploads/twitter-logo-png/twitter-bird-symbols-png-logo-0.png" alt="">
+        </div>
+        <div class="text-center mt-4 name">
+            Twitter
+        </div>
+        <form id="account" class="p-3 mt-3" method="post">
+            <div asp-validation-summary="ModelOnly" class="text-danger"></div>
+            <div class="form-field d-flex align-items-center">
+                <span class="far fa-user"></span>
+                <input asp-for="Input.Email" type="email" name="email" id="email" autocomplete="email" aria-required="true" placeholder="Correo Electronico">
+            </div>
+            <div class="form-field d-flex align-items-center">
+                <span class="fas fa-key"></span>
+                <input asp-for="Input.Password" type="password" name="password" id="password" placeholder="Contraseña">
+            </div>
+            <button class="btn mt-3">Login</button>
+        </form>
+        <div class="text-center fs-6">
+            <a href="#">Forget password?</a> or <a href="#">Sign up</a>
+        </div>
+    </div>
+}

@@ -6,24 +6,26 @@
 <RadzenContextMenu />
 <RadzenTooltip />
 
-
+<AuthorizeView>
+    <Authorized>
         <div class="page">
             <div class="sidebar">
                 <NavMenu />
             </div>
-            <AuthorizeView>
-                <Authorized>
-                    <main>
 
-                    <article class="content px-4">
-                        @Body
-                    </article>
-                    </main>
-                </Authorized>
-        <NotAuthorized><h2 class="text-center"><span>No esta Autorizado</span></h2></NotAuthorized>
-            </AuthorizeView>
-
+            <main>
+                <article class="content px-4">
+                    @Body
+                </article>
+            </main>
         </div>
+    </Authorized>
+    <NotAuthorized>
+        <RedirectToLogin />
+    </NotAuthorized>
+</AuthorizeView>
+
+       
   
    
     
